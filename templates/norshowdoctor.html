@@ -1,0 +1,50 @@
+{% block head %}
+
+
+    {% endblock %}
+
+
+{% extends 'base.html' %}
+
+{% block content %}
+
+<style>
+    .b1 {
+        background-color: #ADD8E6;
+    }
+</style>
+
+<!-- <section class="bg-light text-light p-5">
+    <div class="container">
+            <form action="" method="post">
+
+                <div class="input-group " >
+
+                    <input type="search" class="form-control" placeholder="search" name="doctor" id="search">
+                    <button class="btn btn-dark btn-lg" type="submit">Submit</button>
+
+                </div>
+            </form>
+        </div>
+</section> -->
+
+<div class="container my-3 ">
+    <h3>The doctors:</h3>
+    {% for doctor in doctors %}
+    <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative b1">
+        <div class="col p-4 d-flex flex-column position-static">
+            <p class="mb-0">Name: {{doctor["name"]}}</p>
+            <p class="mb-0">Speciality: {{doctor["speciality"]}}</p>
+            <p class="mb-0">Contact no: {{doctor["contact"]}}</p>
+            <p class="mb-0">Email: {{doctor["email"]}}</p>
+            <p class="mb-0">institution: {{doctor["institution"]}}</p>
+        </div>
+
+    </div>
+    {% endfor %}
+</div>
+
+
+</div>
+
+    {%endblock%}

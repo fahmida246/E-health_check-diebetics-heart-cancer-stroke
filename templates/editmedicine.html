@@ -1,0 +1,37 @@
+{% block head %}
+<link rel="stylesheet" href="{{ url_for('static',filename='css/contact1.css') }}">
+
+    {% endblock %}
+
+
+{% extends 'base1.html' %}
+
+{% block content %}
+    <div class="container shadow min-vh-100 p-4">
+        <p style="text-align: center; background-color: #1977cc; padding: 10px; border-radius: 5px; color: white;">appointment</p>
+    <form class="row g-3" action="" method="post" enctype = "multipart/form-data" >
+        <div class="col-12">
+          <label for="inputAddress" class="form-label">Medicine name</label>
+          <input type="text" name="name" value="{{medi['name']}}" class="form-control" id="inputAddress" placeholder="full name">
+        </div>
+        <div class="col-12">
+          <label for="inputAddress2" class="form-label">Disease type</label>
+          <input type="text" name="disease_type" value="{{medi['disease_type']}}" class="form-control" id="inputAddress2" placeholder="">
+        </div>
+        <div class="col-12">
+            <label for="exampleFormControlTextarea1" class="form-label">Description of medicine</label>
+            <textarea class="form-control" name="desc"  id="exampleFormControlTextarea1" rows="3">{{medi['desc']}}</textarea>
+        </div>
+        <div class="col-12">
+          <label for="exampleFormControlTextarea1" class="form-label">add picture</label>
+          <input type = "file" name = "image" class="form-control" multiple/>
+        </div>
+        <div class="col-12">
+          <input type = "submit"/>
+
+          </div>
+
+      </form>
+      </div>
+
+    {%endblock%}

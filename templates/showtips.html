@@ -1,0 +1,53 @@
+{% block head %}
+
+
+    {% endblock %}
+
+
+{% extends 'base1.html' %}
+
+{% block content %}
+
+<style>
+    .b1 {
+        background-color: #ADD8E6;
+    }
+</style>
+
+<section class="bg-light text-light p-5">
+    <div class="container">
+        
+            <form action="/searchforjob" method="get">
+
+                <div class="input-group " >
+
+                    <input type="search" class="form-control" placeholder="search" name="query" id="search">
+                    <button class="btn btn-dark btn-lg" type="submit">Submit</button>
+
+                </div>
+            </form>
+        </div>
+</section>
+
+<div class="container my-3 ">
+    <h3>The tips:</h3>
+    {% for tip in tips %}
+    <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative b1">
+        <div class="col p-4 d-flex flex-column position-static">
+            <p class="mb-0">title: {{tip["title"]}}</p>
+            <p class="mb-0">Main theme: {{tip["body"]}}</p>
+
+            <div class="my-3">
+             <a class="btn btn-sm" href="{{ url_for('edittips', id=tip['_id']) }}"> <i class="fa-regular fa-pen-to-square"></i> Edit</a> 
+            <a class="btn btn-sm" href="{{ url_for('deletetips', id=tip['_id']) }}"> <i class="fa-regular fa-trash-can"></i>  delete</a> 
+        </div>
+        </div>
+
+    </div>
+    {% endfor %}
+</div>
+
+
+</div>
+
+    {%endblock%}

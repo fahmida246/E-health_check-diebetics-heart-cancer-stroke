@@ -1,0 +1,115 @@
+{% block head %}
+
+
+    {% endblock %}
+
+
+{% extends 'base2.html' %}
+
+{% block content %}
+
+
+  <div class="section no-pad-bot" id="index-banner">
+    <div class="container">
+     <h5 style="text-align: center; color: brown; font-weight: 600;">{{pred}}</h5>
+      <h1 class="header center orange-text">heart Prediction</h1>
+      <div class="row center">
+       
+        <ul>
+          <li style="color: red;"> if you want to enter male press:1, female press: 0</li>
+          <li style="color: red;"> if you want to enter yes press: 1, no press: 0</li>
+        </ul>
+      </div>
+
+
+      <div class="row">
+        <form action='/predict3' method="post" class="col s12">
+            <div class="row">
+                <div class="input-field col s4">
+                    <label for="first_name"><b>age</b></label>
+                    <br>
+                    <input  name="1" id="first_name" type="text" class="validate">
+                </div>
+                <div class="input-field col s4">
+                    <label for="last_name"><b>sex </b></label>
+                    <br>
+                    <input id="last_name" name="2"   type="text" class="validate">
+    
+                </div>
+    
+                <div class="input-field col s4">
+                    <label for="_name"><b>chest pain</b></label>
+                    <br>
+                    <input id="_name" name="3"  type="text" class="validate">
+    
+                </div>
+                <div class="input-field col s4">
+                    <label for="first_name"><b>resting blood pressure</b></label>
+                    <br>
+                    <input  name="4" id="first_name" type="text" class="validate">
+                </div>
+                <div class="input-field col s4">
+                    <label for="last_name"><b>serum cholestoral in mg/dl</b></label>
+                    <br>
+                    <input id="last_name" name="5"   type="text" class="validate">
+                </div>
+                <div class="input-field col s4">
+                  <label ><b>resting electrocardiographic</b></label>
+                  <br>
+                  <input name = '6' >
+
+                </div>
+                <div class="input-field col s4">
+                    <label for="last_name"><b>fasting blood sugar > 120 mg/dl</b></label>
+                    <br>
+                    <input id="last_name" name="7"   type="text" class="validate">
+                </div>
+                <div class="input-field col s4">
+                    <label for="_name"><b>maximum heart rate achieved</b></label>
+                    <br>
+                    <input id="_name" name="8"  type="text" class="validate">
+                </div>
+                <div class="input-field col s4">
+                  <label for="last_name"><b>exercise induced angina</b></label>
+                  <br>
+                  <input id="last_name" name="9"   type="text" class="validate">
+              </div>
+              <div class="input-field col s4">
+                  <label for="_name"><b>oldpeak = ST depression induced by exercise relative to rest</b></label>
+                  <br>
+                  <input id="_name" name="10"  type="text" class="validate">
+              </div>
+              <div class="input-field col s4">
+                <label for="_name"><b>the slope of the peak exercise ST segment</b></label>
+                <br>
+                <input id="_name" name="11"  type="text" class="validate">
+            </div>
+            <div class="input-field col s4">
+              <label for="last_name"><b>number of major vessels (0-3) colored by flourosopy</b></label>
+              <br>
+              <input id="last_name" name="12"   type="text" class="validate">
+          </div>
+          <div class="input-field col s4">
+              <label for="_name"><b>thalium: 0 = normal; 1 = fixed defect; 2 = reversable defect</b></label>
+              <br>
+              <input id="_name" name="13"  type="text" class="validate">
+          </div>
+          </div>
+    
+          <div class="row center">
+    
+              <button type="submit" class="btn">Predict Probability</button>
+
+          </div>
+        </form>
+  </div>
+
+      <br>
+
+     
+    <br><br>
+  </div>
+  </div>
+
+  {% endblock %}
+

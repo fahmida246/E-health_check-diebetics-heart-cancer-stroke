@@ -1,0 +1,39 @@
+body{
+  background-image: url('../img/home.jpg');
+}
+.contact .items{
+    display: flex;
+    padding: 1rem;
+  
+  }
+  
+  .contact .item{
+    flex: 1;
+    text-align: center;
+    padding: 1rem;
+  }
+  .form-control{
+    width: 100%;
+    padding: 10px;
+    margin: 5px;
+  }
+
+  .section-title h2,p{
+text-align: center;
+padding: 10px ;
+
+  }
+  .item{
+    font-size: 20px;
+    color: black;
+  }
+  i{
+    color: blue;
+  }
+  /* .address, .email , .phone{
+    display: flex;
+    align-items: flex-end;
+padding: 0;
+    
+  } */
+

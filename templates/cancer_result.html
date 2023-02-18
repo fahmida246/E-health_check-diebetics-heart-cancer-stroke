@@ -1,0 +1,35 @@
+{% block head %}
+
+
+    {% endblock %}
+
+
+{% extends 'base2.html' %}
+
+{% block content %}
+
+
+
+
+
+      <div class="row" style="margin:15% 0% 0% 10%">
+        <div class="results">
+          {% if prediction==1 %}
+            <h1>Prediction: <span class='danger'>Oops! You have Chances of lung cancer.</span></h1>
+            
+          {% elif prediction==0 %}
+            <h1>Prediction: <span class='safe'>Great! You DON'T chances have lung cancer.</span></h1>
+            
+          {% endif %}
+        </div>
+  </div>
+
+      <br>
+
+     
+    <br><br>
+  </div>
+  </div>
+
+  {% endblock %}
+

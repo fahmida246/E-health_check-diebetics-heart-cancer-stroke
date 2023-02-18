@@ -1,0 +1,41 @@
+{% block head %}
+<link rel="stylesheet" href="{{ url_for('static',filename='css/contact1.css') }}">
+
+    {% endblock %}
+
+
+{% extends 'base1.html' %}
+
+{% block content %}
+    <div class="container shadow min-vh-100 p-4">
+        <p style="text-align: center; background-color: #1977cc; padding: 10px; border-radius: 5px; color: white;">Add doctor</p>
+    <form class="row g-3" action="" method="post">
+        <div class="col-md-6">
+          <label for="inputEmail4" class="form-label">Email</label>
+          <input type="email" name="email" class="form-control" id="inputEmail4">
+        </div>
+        <div class="col-md-6">
+          <label for="inputPassword4" class="form-label">contact no </label>
+          <input type="number" name="contact" class="form-control" id="inputPassword4">
+        </div>
+        <div class="col-12">
+          <label for="inputAddress" class="form-label">full name</label>
+          <input type="text" name="name" class="form-control" id="inputAddress" placeholder="full name">
+        </div>
+        <div class="col-12">
+          <label for="inputAddress2" class="form-label">speciality</label>
+          <input type="text" name="speciality" class="form-control" id="inputAddress2" placeholder="">
+        </div>
+        <div class="col-12">
+            <label for="inputAddress2" class="form-label">institution</label>
+            <input type="text" name="institution" class="form-control" id="inputAddress2" placeholder="">
+          </div>
+
+        <div class="col-12">
+            <button type="submit" class="btn btn-primary">Submit</button>
+          </div>
+
+      </form>
+      </div>
+
+    {%endblock%}

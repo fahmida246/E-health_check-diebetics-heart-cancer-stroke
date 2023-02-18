@@ -1,0 +1,41 @@
+{% block head %}
+<link rel="stylesheet" href="{{ url_for('static',filename='css/contact1.css') }}">
+
+    {% endblock %}
+
+{% extends 'base2.html' %}
+
+{% block content %}
+     <!-- ======= Contact Section ======= -->
+     <section id="contact" class="contact">
+        
+        <div class="container">
+          <div class="">
+  
+            
+
+        
+  
+            <div class="" id="form">
+                <br><br>
+              <h2>Send query to admin </h2>
+              <form action="" role="form" class="" method="post">
+                   
+                    <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required>
+                    
+                    <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required>
+                  <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" required>
+                    
+                  <textarea class="form-control" name="msg" rows="5" placeholder="Message" required></textarea>
+                
+                <button class="btn" type="submit">Send Message</button>
+              </form>
+  
+            </div>
+  
+          </div>
+  
+        </div>
+      </section><!-- End Contact Section -->
+
+      {%endblock%}

@@ -1,0 +1,54 @@
+{% block head %}
+
+
+    {% endblock %}
+
+
+{% extends 'base2.html' %}
+
+{% block content %}
+
+<style>
+    .b1 {
+        background-color: #ADD8E6;
+    }
+</style>
+
+<section class="bg-light text-light p-5">
+    <div class="container">
+            <form action="" method="post">
+
+                <div class="input-group " >
+
+                    <input type="search" class="form-control" placeholder="search by medicine name" name="medicine" id="search">
+                    <button class="btn btn-dark btn-lg" type="submit">Submit</button>
+
+                </div>
+            </form>
+        </div>
+</section>
+
+<div class="container my-3 ">
+    <h3>The medicine:</h3>
+    {% for medi in medicines %}
+    <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative b1">
+        <div class="col p-4 d-flex flex-column position-static">
+            <p class="mb-0">Name: {{medi["name"]}}</p>
+            <p class="mb-0">Disease type: {{medi["disease_type"]}}</p>
+            <p class="mb-0">Description: {{medi["desc"]}}</p>
+            <img src="{{ url_for('display_image', filename=medi.image) }}" alt="" class="img-fluid img-thumbnail float-end mt-4" width="150" height="150">
+
+<div class="my-3">
+           
+
+        </div>
+        </div>
+
+    </div>
+    {% endfor %}
+</div>
+
+
+</div>
+
+    {%endblock%}

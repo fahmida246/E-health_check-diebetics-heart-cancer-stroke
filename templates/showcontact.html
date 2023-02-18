@@ -1,0 +1,71 @@
+{% block head %}
+
+<style>
+    table, td, th {  
+  border: 1px solid #ddd;
+  text-align: left;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th, td {
+  padding: 10px;
+}
+
+    </style>
+
+    {% endblock %}
+
+
+{% extends 'base1.html' %}
+
+{% block content %}
+
+<style>
+    .b1 {
+        background-color: #ADD8E6;
+    }
+</style>
+
+<section class="bg-light text-light p-5">
+    <div class="container">
+            <form action="" method="post">
+
+                <div class="input-group " >
+
+                    <input type="search" class="form-control" placeholder="search" name="query" id="search">
+                    <button class="btn btn-dark btn-lg" type="submit">Submit</button>
+
+                </div>
+            </form>
+        </div>
+</section>
+
+<div class="container my-3 ">
+    <h3>The contacts:</h3>
+
+
+<table border="">
+    <tr>
+        <th style="background-color: #ADD8E6;">Name</th>
+        <th style="background-color: #ADD8E6;">Email</th>
+        <th style="background-color: #ADD8E6;">Subject</th>
+        <th style="background-color: #ADD8E6;">Message</th>
+    </tr>
+    {% for contact in contacts %}
+    <tr>
+        <td>{{contact["name"]}}</td>
+        <td>{{contact["email"]}}</td>
+        <td>{{contact["subject"]}}</td>
+        <td>{{contact["msg"]}}</td>
+    </tr>
+    {% endfor %}
+    
+        </table>
+
+    </div>
+
+    {%endblock%}
